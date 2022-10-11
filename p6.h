@@ -21,7 +21,7 @@ vector<list<T>> zip(list<T>& C1, list<T>& C2,  list<T>& C3){
     vl.emplace_back(t1);vl.emplace_back(t2);vl.emplace_back(t3);
     return vl;}
 template <typename T>
-vector<vector<T>> zip(vector<T>& C1, vector<T>& C2,  vector<T>& C3,vector<T>C4){
+vector<vector<T>> zip(vector<T>& C1, vector<T>& C2,  vector<T>& C3,vector<T>& C4){
     vector<vector<T>> vv;
     vector<T> t1,t2,t3,t4,t5;
     for(auto i=0;i<C1.size();i++){
