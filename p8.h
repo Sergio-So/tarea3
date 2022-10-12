@@ -12,7 +12,7 @@
 #include <vector>
 #include <deque>
 using namespace std;
-template <template<class> class Container=vector, class T>
+template <class T,template<class> class Container=vector>
 Container<T> filter_codes(T file, char character){
     ifstream document(file);string ch;Container<T> out;
     if (document.is_open()){while (getline(document, ch)){if (ch[0] == character){out.push_back(ch);}}}
