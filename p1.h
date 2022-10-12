@@ -6,23 +6,17 @@
 #define TAREA_3_LIBRERIAS_P1_H
 #include <iostream>
 #include <vector>
+#include <list>
 using namespace std;
 template<class T>
-T split_range(T v,int n) {
-    T ret;
-    if(n==4){
-       ret[0]=10;ret[1]=20;ret[2]=30;ret[3]={40,50};
-       return ret;
-    }
-    if(n==2){
-        ret[0]={10,20,30};ret[1]={40,50,60};
-        return ret;
-    }
-    if(n==3){
-        ret[0]={10,20};ret[1]={30,40};ret[2]={50,60,70};
-        return ret;
-    }
-
-}
-
+vector<vector<int>> split_range(T v1, int n){
+    int c = 0;
+    for (auto&& l:v1){c ++;}
+    int ce = c/n;
+    c = 0;vector<int> v2;vector <vector<int>> m;
+    for (auto && l:v1){
+      v2.push_back(l);c++;
+      if(c == ce){m.push_back(v2);v2.erase(v2.begin(), v2.end());c=0;}}
+    for (int i=0;i<v2.size();i++){m[n -1].push_back(v2[i]);}
+    return m;}
 #endif //TAREA_3_LIBRERIAS_P1_H
